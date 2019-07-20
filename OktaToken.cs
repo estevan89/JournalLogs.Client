@@ -3,7 +3,6 @@ using Newtonsoft.Json;
 
 namespace client
 {
-
     internal class OktaToken
     {
         [JsonProperty(PropertyName = "access_token")]

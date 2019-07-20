@@ -36,7 +36,7 @@ namespace client.Controllers
             var token = await _tokenService.GetToken();
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(JwtBearerDefaults.AuthenticationScheme, token);
            
-            var res = await _httpClient.GetAsync("https://localhost:9001/api/values");
+            var res = await _httpClient.GetAsync("https://localhost:7001/api/values");
             if (res.IsSuccessStatusCode)
             {
                 var content = await res.Content.ReadAsStringAsync();
