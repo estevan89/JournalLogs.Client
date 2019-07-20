@@ -28,12 +28,6 @@ namespace client
             // https://developer.okta.com/blog/2019/04/10/build-rest-api-with-aspnetcore
             services.AddSingleton<ITokenService, TokenService>();
             services.Configure<OktaConfig>(Configuration.GetSection("Okta"));
-
-            services.AddDbContext<ApplicationDbContext>(context =>
-            {
-                context.UseInMemoryDatabase("JournalLogs");
-            });
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -46,11 +40,19 @@ namespace client
             }
             else
             {
+                app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
 
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseMvc();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                name: "default",
+                template: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }
