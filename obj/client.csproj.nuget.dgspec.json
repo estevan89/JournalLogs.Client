@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\conta\\Projets\\client\\client.csproj": {}
+    "c:\\Users\\conta\\Projets\\client\\client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\conta\\Projets\\client\\client.csproj": {
+    "c:\\Users\\conta\\Projets\\client\\client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\conta\\Projets\\client\\client.csproj",
+        "projectUniqueName": "c:\\Users\\conta\\Projets\\client\\client.csproj",
         "projectName": "client",
-        "projectPath": "C:\\Users\\conta\\Projets\\client\\client.csproj",
+        "projectPath": "c:\\Users\\conta\\Projets\\client\\client.csproj",
         "packagesPath": "C:\\Users\\conta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\conta\\Projets\\client\\obj\\",
+        "outputPath": "c:\\Users\\conta\\Projets\\client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
